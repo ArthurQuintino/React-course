@@ -42,16 +42,14 @@ function App() {
     setTasks(newTasks);
   }
 
-  function onAddTaskSubmit(title, description){
+  function onAddTaskSubmit(title, description) {
     const newTasks = {
       id: tasks.length + 1,
       title: title,
       description: description,
-      isCompleted: false
-
-
-    }
-    setTasks([...tasks, newTasks])
+      isCompleted: false,
+    };
+    setTasks([...tasks, newTasks]);
   }
 
   return (
@@ -61,9 +59,7 @@ function App() {
           Gerenciador de Tasks
         </h1>
         <br></br>
-        <AddTask  
-        onAddTaskSubmit={onAddTaskSubmit}
-        />
+        <AddTask onAddTaskSubmit={onAddTaskSubmit} />
         <br></br>
         <Tasks
           tasks={tasks}
